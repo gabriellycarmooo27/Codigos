@@ -1,0 +1,41 @@
+algoritmo "Sistema_de_Cadastro"
+var
+nome, cidade, pais, lingua: caractere
+idade: inteiro
+inicio
+escreval("========================================")
+escreval("       BEM-VINDO AO SISTEMA")
+escreval("========================================")
+escreval("Vamos realizar seu cadastro.")
+escreval("")
+escreval("Digite seu nome: ")
+leia(nome)
+escreval("Digite sua idade: ")
+leia(idade)
+escreval("Digite sua cidade: ")
+leia(cidade)
+escreval("Digite seu país: ")
+leia(pais)
+escreval("Digite o idioma que você fala: ")
+leia(lingua)
+escreval("")
+escreval("========================================")
+escreval("          CADASTRO CONCLUÍDO")
+escreval("========================================")
+escreval("Nome: ", nome)
+escreval("Idade: ", idade, " anos")
+escreval("Cidade: ", cidade)
+escreval("País: ", pais)
+escreval("Idioma: ", lingua)
+escreval("")
+se idade >= 18 entao
+escreval("Classificação: Maior de idade")
+senao
+escreval("Classificação: Menor de idade")
+fimse
+escreval("")
+escreval("Olá, ", nome, "!")
+escreval("Seu cadastro foi realizado com sucesso.")
+escreval("Obrigado por utilizar nosso sistema!")
+escreval("========================================")
+fimalgoritmo
