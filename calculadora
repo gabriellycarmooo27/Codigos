@@ -1,0 +1,84 @@
+import math
+
+def soma(a, b):
+    return a + b
+
+def subtracao(a, b):
+    return a - b
+
+def multiplicacao(a, b):
+    return a * b
+
+def divisao(a, b):
+    if b == 0:
+        return "Erro: divisão por zero"
+    return a / b
+
+def potencia(a, b):
+    return a ** b
+
+def raiz(a):
+    if a < 0:
+        return "Erro: raiz de número negativo"
+    return math.sqrt(a)
+
+def fatorial(a):
+    if a < 0:
+        return "Erro: fatorial de número negativo"
+    return math.factorial(int(a))
+
+def porcentagem(a, b):
+    return (a * b) / 100
+
+def menu():
+    print("\n=== Calculadora da Mais Mais ===")
+    print("1 - Soma")
+    print("2 - Subtração")
+    print("3 - Multiplicação")
+    print("4 - Divisão")
+    print("5 - Potência")
+    print("6 - Raiz quadrada")
+    print("7 - Fatorial")
+    print("8 - Porcentagem")
+    print("0 - Sair")
+
+while True:
+    menu()
+    
+    opcao = input("Escolhe a tua conta aí viado: ")
+
+    if opcao == "0":
+        print("Saindo da Calculadora da Mais Mais...")
+        break
+
+    try:
+        if opcao in ["1", "2", "3", "4", "5", "8"]:
+            a = float(input("Escolhe teu number aí boy: "))
+            b = float(input("Escolhe teu number aí boy: "))
+
+            if opcao == "1":
+                print("Resultado:", soma(a, b))
+            elif opcao == "2":
+                print("Resultado:", subtracao(a, b))
+            elif opcao == "3":
+                print("Resultado:", multiplicacao(a, b))
+            elif opcao == "4":
+                print("Resultado:", divisao(a, b))
+            elif opcao == "5":
+                print("Resultado:", potencia(a, b))
+            elif opcao == "8":
+                print("Resultado:", porcentagem(a, b))
+
+        elif opcao == "6":
+            a = float(input("Escolhe teu number aí boy: "))
+            print("Resultado:", raiz(a))
+
+        elif opcao == "7":
+            a = float(input("Escolhe teu number aí boy: "))
+            print("Resultado:", fatorial(a))
+
+        else:
+            print("Opção inválida!")
+
+    except ValueError:
+        print("Erro: digita um número válido aí 😅")
