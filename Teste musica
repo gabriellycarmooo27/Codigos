@@ -1,0 +1,34 @@
+import sys
+import time
+import shutil
+
+def escrever(texto, velocidade):
+    largura = shutil.get_terminal_size().columns
+    texto = texto.center(largura)
+
+    for letra in texto:
+        sys.stdout.write(letra)
+        sys.stdout.flush()
+        time.sleep(velocidade)
+    print()
+
+def desenhar():
+    largura = shutil.get_terminal_size().columns
+
+    desenho = [
+        "~•~•~•~•~•"
+    ]
+
+    for linha in desenho:
+        print(linha.center(largura))
+        time.sleep(0.1)
+
+desenhar()
+
+escrever("you are", 0.1)
+escrever("my firee", 0.2)
+escrever("the one", 0.1)
+escrever("desireeee", 0.2)
+escrever("belive", 0.2)
+escrever("when i say", 0.2)
+escrever("i want it that way", 0.2)
